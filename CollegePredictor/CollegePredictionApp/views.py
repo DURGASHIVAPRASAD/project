@@ -21,6 +21,13 @@ from sklearn.metrics import recall_score
 from sklearn.metrics import f1_score
 
 
+
+from django.conf import settings as my_settings
+
+db_host = my_settings.DB_HOST
+db_user = my_settings.DB_USER
+db_pass = my_settings.DB_PASS
+
 global uname, dataset, sc, rf_cls
 accuracy = []
 precision = []
@@ -179,7 +186,7 @@ def UserLoginAction(request):
         username = request.POST.get('t1', False)
         password = request.POST.get('t2', False)
         index = 0
-        con = pymysql.connect(host='127.0.0.1',port = 3306,user = 'root', password = 'root', database = 'CollegePrediction',charset='utf8')
+        con = pymysql.connect(host='127.0.0.1',port = 3306,user = 'root', password = 'rootroot', database = 'CollegePrediction',charset='utf8')
         with con:
             cur = con.cursor()
             cur.execute("select username,password FROM signup")
@@ -205,7 +212,7 @@ def SignupAction(request):
         email = request.POST.get('t5', False)
         address = request.POST.get('t6', False)
         output = "none"
-        con = pymysql.connect(host='127.0.0.1',port = 3306,user = 'root', password = 'root', database = 'CollegePrediction',charset='utf8')
+        con = pymysql.connect(host='127.0.0.1',port = 3306,user = 'root', password = 'rootroot', database = 'CollegePrediction',charset='utf8')
         with con:
             cur = con.cursor()
             cur.execute("select username FROM signup")
@@ -215,7 +222,7 @@ def SignupAction(request):
                     output = username+" Username already exists"
                     break
         if output == 'none':
-            db_connection = pymysql.connect(host='127.0.0.1',port = 3306,user = 'root', password = 'root', database = 'CollegePrediction',charset='utf8')
+            db_connection = pymysql.connect(host='127.0.0.1',port = 3306,user = 'root', password = 'rootroot', database = 'CollegePrediction',charset='utf8')
             db_cursor = db_connection.cursor()
             student_sql_query = "INSERT INTO signup(username,password,contact_no,gender,email,address) VALUES('"+username+"','"+password+"','"+contact+"','"+gender+"','"+email+"','"+address+"')"
             db_cursor.execute(student_sql_query)
