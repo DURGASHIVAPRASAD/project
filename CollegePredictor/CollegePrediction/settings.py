@@ -26,7 +26,9 @@ SECRET_KEY = 'n)jq+$rh87o+3da$sph#_cuxc^*0+d49x+k#1kfub91=r=8hfl'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+DB_HOST = 'mydb.cl0ym8uqy7c1.ap-south-1.rds.amazonaws.com'
+DB_PASS = 'rootroot'
+DB_USER = 'root'
 
 # Application definition
 
@@ -83,7 +85,7 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'USER': 'root',
-        'PASSWORD': 'root',
+        'PASSWORD': 'rootroot',
 	'OPTIONS': {
           'autocommit': True,
         },        
