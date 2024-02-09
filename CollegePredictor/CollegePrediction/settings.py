@@ -56,7 +56,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-		os.path.join('E:/Vithal/Nov22/CollegePredictor/CollegePredictionApp', 'templates'),
+		os.path.join('BASE_DIR', 'CollegePredictionApp/templates'),
 	],
         'APP_DIRS': True,
         'OPTIONS': {
