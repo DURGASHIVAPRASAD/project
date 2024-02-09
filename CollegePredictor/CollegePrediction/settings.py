@@ -82,7 +82,7 @@ DATABASES = {
    'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'CollegePrediction',
-        'HOST': '127.0.0.1',
+        'HOST': 'mydb.cl0ym8uqy7c1.ap-south-1.rds.amazonaws.com',
         'PORT': '3306',
         'USER': 'root',
         'PASSWORD': 'rootroot',
