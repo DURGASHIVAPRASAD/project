@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'n)jq+$rh87o+3da$sph#_cuxc^*0+d49x+k#1kfub91=r=8hfl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 DB_HOST = 'mydb.cl0ym8uqy7c1.ap-south-1.rds.amazonaws.com'
